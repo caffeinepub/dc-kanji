@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark ink aesthetic — deep charcoal background, warm off-white text */
+    --background: 0.14 0.005 270;
+    --foreground: 0.93 0.01 95;
+
+    --card: 0.17 0.007 270;
+    --card-foreground: 0.93 0.01 95;
+
+    --popover: 0.17 0.007 270;
+    --popover-foreground: 0.93 0.01 95;
+
+    /* Ink red accent */
+    --primary: 0.52 0.18 22;
+    --primary-foreground: 0.97 0.005 95;
+
+    --secondary: 0.22 0.008 270;
+    --secondary-foreground: 0.8 0.01 95;
+
+    --muted: 0.2 0.006 270;
+    --muted-foreground: 0.55 0.01 270;
+
+    --accent: 0.52 0.18 22;
+    --accent-foreground: 0.97 0.005 95;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.97 0.005 95;
+
+    --border: 0.25 0.008 270;
+    --input: 0.25 0.008 270;
+    --ring: 0.52 0.18 22;
+
+    --chart-1: 0.52 0.18 22;
+    --chart-2: 0.6 0.12 200;
+    --chart-3: 0.55 0.14 140;
+    --chart-4: 0.55 0.13 60;
+    --chart-5: 0.5 0.16 300;
+
+    --sidebar: 0.14 0.005 270;
+    --sidebar-foreground: 0.93 0.01 95;
+    --sidebar-primary: 0.52 0.18 22;
+    --sidebar-primary-foreground: 0.97 0.005 95;
+    --sidebar-accent: 0.22 0.008 270;
+    --sidebar-accent-foreground: 0.8 0.01 95;
+    --sidebar-border: 0.25 0.008 270;
+    --sidebar-ring: 0.52 0.18 22;
+
+    --radius: 2px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "General Sans", sans-serif;
+  }
+}
